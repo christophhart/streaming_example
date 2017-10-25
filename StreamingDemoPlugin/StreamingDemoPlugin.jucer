@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="wMoFLo" name="StreamingDemoPlugin" projectType="audioplug"
+              version="1.0.0" bundleIdentifier="com.yourcompany.StreamingDemoPlugin"
+              includeBinaryInAppConfig="1" companyCopyright="2017, HISE" buildVST="1"
+              buildVST3="0" buildAU="1" buildAUv3="0" buildRTAS="0" buildAAX="0"
+              pluginName="StreamingDemoPlugin" pluginDesc="StreamingDemoPlugin"
+              pluginManufacturer="HISE" pluginManufacturerCode="Hain" pluginCode="Stdp"
+              pluginChannelConfigs="{0, 2}" pluginIsSynth="1" pluginWantsMidiIn="1"
+              pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
+              pluginAUExportPrefix="StreamingDemoPluginAU" pluginRTASCategory=""
+              aaxIdentifier="com.yourcompany.StreamingDemoPlugin" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
+              jucerVersion="4.3.0" companyName="HISE" companyWebsite="http://hise.audio/"
+              companyEmail="info@hise.audio">
+  <MAINGROUP id="H2w1hV" name="StreamingDemoPlugin">
+    <GROUP id="{52FAE574-5771-4BB6-37E0-727B6717F6FE}" name="Source">
+      <FILE id="oom2ku" name="MusicBoxSampleMap.xml" compile="0" resource="1"
+            file="Source/MusicBoxSampleMap.xml"/>
+      <FILE id="arsTix" name="StreamingExample.cpp" compile="1" resource="0"
+            file="Source/StreamingExample.cpp"/>
+      <FILE id="dnWgQ5" name="StreamingExample.h" compile="0" resource="0"
+            file="Source/StreamingExample.h"/>
+      <FILE id="NhKsc5" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="dk2Nze" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="c857wu" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="MNgWLb" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="StreamingDemoPlugin"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="StreamingDemoPlugin"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="hi_lac" path="../../../HISE modules"/>
+        <MODULEPATH id="hi_streaming" path="../../../HISE modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../HISE modules/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <XCODE_IPHONE targetFolder="Builds/iOS" iosScreenOrientation="portraitlandscape">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="StreamingDemoPlugin"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="StreamingDemoPlugin"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="hi_lac" path="../../../HISE modules"/>
+        <MODULEPATH id="hi_streaming" path="../../../HISE modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../HISE modules/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_IPHONE>
+    <VS2015 targetFolder="Builds/VisualStudio2015">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="1" optimisation="1" targetName="StreamingDemoPlugin Debug x64"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="0" optimisation="3" targetName="StreamingDemoPlugin x64"/>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="StreamingDemoPlugin Debug x86"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="3" targetName="StreamingDemoPlugin x86"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../HISE modules/JUCE/modules"/>
+        <MODULEPATH id="hi_lac" path="../../../HISE modules"/>
+        <MODULEPATH id="hi_streaming" path="../../../HISE modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../HISE modules/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2015>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="hi_lac" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="hi_streaming" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled" STANDALONE_STREAMING="enabled"/>
+</JUCERPROJECT>

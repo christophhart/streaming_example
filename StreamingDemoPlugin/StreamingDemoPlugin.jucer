@@ -10,8 +10,9 @@
               pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="StreamingDemoPluginAU" pluginRTASCategory=""
               aaxIdentifier="com.yourcompany.StreamingDemoPlugin" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
-              jucerVersion="4.3.0" companyName="HISE" companyWebsite="http://hise.audio/"
-              companyEmail="info@hise.audio">
+              jucerVersion="5.2.0" companyName="HISE" companyWebsite="http://hise.audio/"
+              companyEmail="info@hise.audio" displaySplashScreen="0" reportAppUsage="0"
+              splashScreenColour="Dark" buildStandalone="0" enableIAA="0" cppLanguageStandard="11">
   <MAINGROUP id="H2w1hV" name="StreamingDemoPlugin">
     <GROUP id="{52FAE574-5771-4BB6-37E0-727B6717F6FE}" name="Source">
       <FILE id="oom2ku" name="MusicBoxSampleMap.xml" compile="0" resource="1"
@@ -32,8 +33,10 @@
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="StreamingDemoPlugin"/>
-        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="StreamingDemoPlugin"/>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="StreamingDemoPlugin"
+                       enablePluginBinaryCopyStep="1"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="StreamingDemoPlugin"
+                       enablePluginBinaryCopyStep="1"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../../../HISE modules/JUCE/modules"/>
@@ -42,9 +45,6 @@
         <MODULEPATH id="juce_data_structures" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_video" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_basics" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../../../HISE modules/JUCE/modules"/>
@@ -55,10 +55,13 @@
         <MODULEPATH id="juce_audio_utils" path="../../../HISE modules/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <XCODE_IPHONE targetFolder="Builds/iOS" iosScreenOrientation="portraitlandscape">
+    <XCODE_IPHONE targetFolder="Builds/iOS" iosScreenOrientation="portraitlandscape"
+                  iPadScreenOrientation="portraitlandscape" iosDeviceFamily="1,2">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="StreamingDemoPlugin"/>
-        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="StreamingDemoPlugin"/>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="StreamingDemoPlugin"
+                       enablePluginBinaryCopyStep="1"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="StreamingDemoPlugin"
+                       enablePluginBinaryCopyStep="1"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../../../HISE modules/JUCE/modules"/>
@@ -67,9 +70,6 @@
         <MODULEPATH id="juce_data_structures" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_video" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_basics" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../../../HISE modules/JUCE/modules"/>
@@ -80,16 +80,22 @@
         <MODULEPATH id="juce_audio_utils" path="../../../HISE modules/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_IPHONE>
-    <VS2015 targetFolder="Builds/VisualStudio2015">
+    <VS2017 targetFolder="Builds/VisualStudio2017" windowsTargetPlatformVersion="">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="1" optimisation="1" targetName="StreamingDemoPlugin Debug x64"/>
+                       isDebug="1" optimisation="1" targetName="StreamingDemoPlugin Debug x64"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"/>
         <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="0" optimisation="3" targetName="StreamingDemoPlugin x64"/>
+                       isDebug="0" optimisation="3" targetName="StreamingDemoPlugin x64"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="1"/>
         <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="1" optimisation="1" targetName="StreamingDemoPlugin Debug x86"/>
+                       isDebug="1" optimisation="1" targetName="StreamingDemoPlugin Debug x86"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"/>
         <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="0" optimisation="3" targetName="StreamingDemoPlugin x86"/>
+                       isDebug="0" optimisation="3" targetName="StreamingDemoPlugin x86"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="1"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../../../HISE modules/JUCE/modules"/>
@@ -98,9 +104,6 @@
         <MODULEPATH id="juce_data_structures" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_video" path="../../../HISE modules/JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_basics" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../../../HISE modules/JUCE/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../../../HISE modules/JUCE/modules"/>
@@ -110,7 +113,7 @@
         <MODULEPATH id="hi_streaming" path="../../../HISE modules"/>
         <MODULEPATH id="juce_audio_utils" path="../../../HISE modules/JUCE/modules"/>
       </MODULEPATHS>
-    </VS2015>
+    </VS2017>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="hi_lac" showAllCode="1" useLocalCopy="0"/>
@@ -122,14 +125,11 @@
     <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
-    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
-    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
-    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
   <JUCEOPTIONS JUCE_QUICKTIME="disabled" STANDALONE_STREAMING="enabled"/>
 </JUCERPROJECT>

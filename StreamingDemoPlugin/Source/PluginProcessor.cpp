@@ -97,9 +97,9 @@ bool StreamingDemoPluginAudioProcessor::producesMidi() const { return false; }
 double StreamingDemoPluginAudioProcessor::getTailLengthSeconds() const { return 0.0; }
 int StreamingDemoPluginAudioProcessor::getNumPrograms() { return 1; }
 int StreamingDemoPluginAudioProcessor::getCurrentProgram() { return 0; }
-void StreamingDemoPluginAudioProcessor::setCurrentProgram (int index) { }
-const String StreamingDemoPluginAudioProcessor::getProgramName (int index) { return String(); }
-void StreamingDemoPluginAudioProcessor::changeProgramName (int index, const String& newName) {}
+void StreamingDemoPluginAudioProcessor::setCurrentProgram (int /*index*/) { }
+const String StreamingDemoPluginAudioProcessor::getProgramName (int /*index*/) { return String(); }
+void StreamingDemoPluginAudioProcessor::changeProgramName (int /*index*/, const String& newName) {}
 
 //==============================================================================
 void StreamingDemoPluginAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
@@ -149,8 +149,8 @@ AudioProcessorEditor* StreamingDemoPluginAudioProcessor::createEditor()
     return new StreamingDemoPluginAudioProcessorEditor (*this);
 }
 
-void StreamingDemoPluginAudioProcessor::getStateInformation (MemoryBlock& destData) {}
-void StreamingDemoPluginAudioProcessor::setStateInformation (const void* data, int sizeInBytes) {}
+void StreamingDemoPluginAudioProcessor::getStateInformation (MemoryBlock& /*destData*/) {}
+void StreamingDemoPluginAudioProcessor::setStateInformation (const void* data, int /*sizeInBytes*/) {}
 
 
 AudioProcessor* JUCE_CALLTYPE createPluginFilter()

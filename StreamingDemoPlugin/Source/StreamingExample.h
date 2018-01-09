@@ -111,8 +111,8 @@ public:
 	void renderNextBlock(AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override;
 	void prepareToPlay(double sampleRate, int samplesPerBlock);
 
-	void pitchWheelMoved(int newPitchWheelValue) override {};
-	void controllerMoved(int controllerNumber, int newControllerValue) override {};
+	void pitchWheelMoved(int /*newPitchWheelValue*/) override {};
+	void controllerMoved(int /*controllerNumber*/, int /*newControllerValue*/) override {};
 
 	void updatePitchData(int startSample, int numSamples);
 

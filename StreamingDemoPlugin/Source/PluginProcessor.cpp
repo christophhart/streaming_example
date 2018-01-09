@@ -36,7 +36,7 @@
 
 //==============================================================================
 StreamingDemoPluginAudioProcessor::StreamingDemoPluginAudioProcessor():
-	backgroundThreadPool(new hise::NewSampleThreadPool()),
+	backgroundThreadPool(new hise::SampleThreadPool()),
 	temporaryVoiceBuffer(false, 2, 0) // we'll need an integer buffer for monolith samples with stereo channels
 {
 	

@@ -146,7 +146,7 @@ hise::StreamingSamplerSound* ExampleStreamingSamplerSound::getWrappedSound() con
 	return wrappedSound.get();
 }
 
-ExampleStreamingSamplerVoice::ExampleStreamingSamplerVoice(hise::NewSampleThreadPool* pool, hlac::HiseSampleBuffer* temporaryVoiceBuffer) :
+ExampleStreamingSamplerVoice::ExampleStreamingSamplerVoice(hise::SampleThreadPool* pool, hlac::HiseSampleBuffer* temporaryVoiceBuffer) :
 	wrappedVoice(pool)
 {
 	// Give the voice a temporary scratch buffer

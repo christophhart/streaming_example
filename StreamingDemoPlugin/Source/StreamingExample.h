@@ -102,7 +102,7 @@ class ExampleStreamingSamplerVoice : public SynthesiserVoice
 {
 public:
 
-	ExampleStreamingSamplerVoice(hise::NewSampleThreadPool* pool, hlac::HiseSampleBuffer* temporaryVoiceBuffer);
+	ExampleStreamingSamplerVoice(hise::SampleThreadPool* pool, hlac::HiseSampleBuffer* temporaryVoiceBuffer);
 
 	bool canPlaySound(SynthesiserSound*) { return true; };
 	void startNote(int midiNoteNumber, float velocity, SynthesiserSound* sound, int currentPitchWheelPosition);

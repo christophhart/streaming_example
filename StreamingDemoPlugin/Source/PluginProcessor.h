@@ -95,7 +95,7 @@ private:
 	ExampleStreamingPool pool;
 
 	// This object handles the background threaded loading of the samples
-	ScopedPointer<hise::NewSampleThreadPool> backgroundThreadPool;
+	ScopedPointer<hise::SampleThreadPool> backgroundThreadPool;
 
 	// Just use the default synthesiser from JUCE for the Streaming sampler demo...
 	Synthesiser streamingSampler;

@@ -46,7 +46,7 @@ StreamingDemoPluginAudioProcessor::StreamingDemoPluginAudioProcessor():
 	// Parse the XML element from the embedded binary data
 	MemoryBlock mb(BinaryData::MusicBoxSampleMap_xml, BinaryData::MusicBoxSampleMap_xmlSize);
 	auto xmlText = mb.toString();
-	ScopedPointer<XmlElement> xmlElement = XmlDocument::parse(xmlText);
+	auto xmlElement = XmlDocument::parse(xmlText);
 
 	if (xmlElement != nullptr)
 	{
@@ -108,7 +108,7 @@ void StreamingDemoPluginAudioProcessor::prepareToPlay (double sampleRate, int sa
 	streamingSampler.setCurrentPlaybackSampleRate(sampleRate);
 
 	// Initialise the temporary voice buffer. This will be a working buffer that holds temporary data from the streaming threads
-	hise::StreamingSamplerVoice::initTemporaryVoiceBuffer(&temporaryVoiceBuffer, samplesPerBlock);
+	hise::StreamingSamplerVoice::initTemporaryVoiceBuffer(&temporaryVoiceBuffer, samplesPerBlock, 8.0);
 
 	// Initialise the streaming voices. This is necessary because they will create temporary buffers according
 	// to the expected block size.

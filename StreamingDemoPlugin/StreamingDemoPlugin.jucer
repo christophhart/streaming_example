@@ -9,10 +9,12 @@
               pluginChannelConfigs="{0, 2}" pluginIsSynth="1" pluginWantsMidiIn="1"
               pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="StreamingDemoPluginAU" pluginRTASCategory=""
-              aaxIdentifier="com.yourcompany.StreamingDemoPlugin" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
-              jucerVersion="5.2.0" companyName="HISE" companyWebsite="http://hise.audio/"
-              companyEmail="info@hise.audio" displaySplashScreen="0" reportAppUsage="0"
-              splashScreenColour="Dark" buildStandalone="0" enableIAA="0" cppLanguageStandard="11">
+              aaxIdentifier="com.yourcompany.StreamingDemoPlugin" pluginAAXCategory="2"
+              companyName="HISE" companyWebsite="http://hise.audio/" companyEmail="info@hise.audio"
+              displaySplashScreen="0" reportAppUsage="0" splashScreenColour="Dark"
+              buildStandalone="0" enableIAA="0" cppLanguageStandard="11" pluginFormats="buildAU,buildVST"
+              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              jucerFormatVersion="1">
   <MAINGROUP id="H2w1hV" name="StreamingDemoPlugin">
     <GROUP id="{52FAE574-5771-4BB6-37E0-727B6717F6FE}" name="Source">
       <FILE id="oom2ku" name="MusicBoxSampleMap.xml" compile="0" resource="1"
@@ -55,8 +57,9 @@
         <MODULEPATH id="juce_audio_utils" path="../../../HISE modules/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <XCODE_IPHONE targetFolder="Builds/iOS" iosScreenOrientation="portraitlandscape"
-                  iPadScreenOrientation="portraitlandscape" iosDeviceFamily="1,2">
+    <XCODE_IPHONE targetFolder="Builds/iOS" iosScreenOrientation="UIInterfaceOrientationPortrait,UIInterfaceOrientationLandscapeLeft,UIInterfaceOrientationLandscapeRight"
+                  iPadScreenOrientation="UIInterfaceOrientationPortrait,UIInterfaceOrientationLandscapeLeft,UIInterfaceOrientationLandscapeRight"
+                  iosDeviceFamily="1,2">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="StreamingDemoPlugin"
                        enablePluginBinaryCopyStep="1"/>
@@ -80,22 +83,16 @@
         <MODULEPATH id="juce_audio_utils" path="../../../HISE modules/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_IPHONE>
-    <VS2017 targetFolder="Builds/VisualStudio2017" windowsTargetPlatformVersion="">
+    <VS2017 targetFolder="Builds/VisualStudio2017" windowsTargetPlatformVersion="10.0.16299.0">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
                        isDebug="1" optimisation="1" targetName="StreamingDemoPlugin Debug x64"
-                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"/>
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       headerPath="D:\Development\HISE modules\tools\SDK\VST3 SDK"/>
         <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
                        isDebug="0" optimisation="3" targetName="StreamingDemoPlugin x64"
                        debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
-                       linkTimeOptimisation="1"/>
-        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="1" optimisation="1" targetName="StreamingDemoPlugin Debug x86"
-                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"/>
-        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="0" optimisation="3" targetName="StreamingDemoPlugin x86"
-                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
-                       linkTimeOptimisation="1"/>
+                       linkTimeOptimisation="1" headerPath="D:\Development\HISE modules\tools\SDK\VST3 SDK"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../../../HISE modules/JUCE/modules"/>
@@ -131,5 +128,8 @@
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
-  <JUCEOPTIONS JUCE_QUICKTIME="disabled" STANDALONE_STREAMING="enabled"/>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled" STANDALONE_STREAMING="1"/>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>
